@@ -1,0 +1,36 @@
+#qp_div {
+    border: 1px solid #e6e6e6;
+    z-index:99;
+    background:#f2f2f2;
+    text-align:center;
+    padding: 10px 0 5px 0;
+    line-height: 30px;
+}
+
+
+#qp_div input[type="text"]{
+    margin-right: 15px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #e6e6e6;
+    width: 40px;
+}
+
+.off_price{
+    background: #eee;
+}
+
+#qp_div input[type="button"]{
+    background: #e4393c;
+    border: 1px solid #e4393c;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px;
+    width: 60px;
+}
+
+#qp_div input[type="button"]:hover{
+    background: #a40000;
+    border: 1px solid #a40000;
+}

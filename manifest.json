@@ -1,0 +1,30 @@
+{
+	"manifest_version" : 2,
+	"name" : "v2ex 楼层引用",
+	"description" : "v2ex 楼层引用",
+	"version" : "0.1",
+	"permissions" : [
+		"tabs",
+		"http://www.v2ex.com/*"
+	],
+	"icons" : {
+		"16":"imgs/Z16.png", 
+		"48":"imgs/Z48.png", 
+		"128":"imgs/Z128.png"
+	},
+	"web_accessible_resources" : [
+		"js/jquery.min.js", "js/v2ex.js"
+	],
+	"content_scripts" : [
+		{
+			"matches" : ["http://www.v2ex.com/t/*"],
+			"css" : ["css/jd.css"],
+			"js" : ["js/jquery.min.js", "js/v2ex.js"]
+		}
+	],
+	"browser_action" : {
+		"default_icon" : "imgs/Z128.png",
+		"default_title" : "v2ex 楼层引用",
+    		"default_popup": "popup.html"
+	}
+}
