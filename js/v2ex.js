@@ -41,3 +41,25 @@ $(".fr > a").click(function(){
     }
     $("#reply_content").val(msg);
 });
+
+function get_msg(floor){
+    floor = floor.replace("(", "").replace("楼)", "");
+    console.log(floor);
+}
+
+
+$(".reply_content").each(function(){
+    var val = $(this).html();
+    if (val.indexOf("@<a href") >= 0){
+        var tars = val.match(/@<a href="\/member\/.+?">.+?<\/a> \(\d+楼\)/g);
+        if (tars != null){
+            for (var i = 0; i < tars.length; i++){
+                tar = tars[i];
+                var floor = tar.match(/\(\d+楼\)/);
+                if (floor != null){
+                    var msg = get_msg(floor[0]);
+                }
+            }
+        }
+    }
+});
